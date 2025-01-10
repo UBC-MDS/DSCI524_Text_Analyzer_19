@@ -1,0 +1,1 @@
+from textanalyzer import textanalyzer
