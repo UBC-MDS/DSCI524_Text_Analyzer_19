@@ -11,6 +11,7 @@ python = "^3.9"
 scikit-learn = "^1.6.1"
 pandas = "^2.2.3"
 langdetect = "^1.0.9"
+textblob = "^0.18.0.post0"
 
 
 [tool.poetry.group.dev.dependencies]
