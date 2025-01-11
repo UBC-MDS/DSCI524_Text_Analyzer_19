@@ -10,8 +10,9 @@ $ pip install textanalyzer
 
 ## Usage
 
-- TODO
+
 - `analyze_sentiment(message, model="default")`: This function analyzes the sentiment of a given message and prints alert message if it's highly negative. 
+- `topic_modeling()`: This function performs topic extraction from a text or a list of texts by using Nonnegative Matrix Factorization. 
 
 ## Contributing
 
