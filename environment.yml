@@ -1,0 +1,17 @@
+name: text
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas=2.2.3
+  - scikit-learn
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-autoapi
+  - myst-nb
+  - pytest
+  - jupyter
+  - pip:
+    - textblob
+    - langdetect

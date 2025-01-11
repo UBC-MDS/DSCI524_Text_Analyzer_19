@@ -8,7 +8,19 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+scikit-learn = "^1.6.1"
+pandas = "^2.2.3"
+langdetect = "^1.0.9"
+textblob = "^0.18.0.post0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+jupyter = "^1.1.1"
+myst-nb = {version = "^1.1.2", python = "^3.9"}
+sphinx-autoapi = "^3.4.0"
+sphinx-rtd-theme = "^3.0.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
