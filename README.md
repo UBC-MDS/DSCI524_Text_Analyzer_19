@@ -10,7 +10,7 @@ $ pip install textanalyzer
 
 ## Usage
 
-- TODO
+- `topic_modeling()`: This function performs topic extraction from a text or a list of texts by using Nonnegative Matrix Factorization. 
 
 ## Contributing
 
