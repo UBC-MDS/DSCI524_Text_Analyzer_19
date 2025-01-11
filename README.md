@@ -11,6 +11,7 @@ $ pip install textanalyzer
 ## Usage
 
 - TODO
+- `analyze_sentiment(message, model="default")`: This function analyzes the sentiment of a given message and prints alert message if it's highly negative. 
 
 ## Contributing
 
