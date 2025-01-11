@@ -13,4 +13,5 @@ def visualize_language_patterns(patterns, method="language"):
         - "ngrams": Displays a bar chart of top n-grams.
         - "char_patterns": Displays a bar chart of common characters.
     """
+
     
