@@ -27,15 +27,24 @@ def detect_language_patterns(messages, method="language", n=2, top_n=5):
     -------
     list
         A list of detected patterns based on the chosen method.
-
-    Examples
-    --------
-    >>> messages = ["Building A Python Package is fun!"]
-    >>> detect_language_patterns(messages, method="language")
-    ['en']
-
-    >>> detect_language_patterns(messages, method="ngrams", n=2, top_n=3)
-    [('building python', 1), ('python package', 1), ('package fun', 1)]
     """
-    
-   
+    if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
+        raise TypeError("messages must be a list of strings")
+
+    if method == "language":
+        return [detect(message) for message in messages]
+
+    elif method == "ngrams":
+        vectorizer = CountVectorizer(ngram_range=(n, n))
+        ngrams = vectorizer.fit_transform(messages)
+        sum_ngrams = ngrams.sum(axis=0)
+        ngram_freq = [(word, sum_ngrams[0, idx]) for word, idx in vectorizer.vocabulary_.items()]
+        return sorted(ngram_freq, key=lambda x: x[1], reverse=True)[:top_n]
+
+    elif method == "char_patterns":
+        all_text = ''.join(messages)
+        char_counts = Counter(all_text)
+        return char_counts.most_common(top_n)
+
+    else:
+        raise ValueError("Unsupported method. Choose from 'language', 'ngrams', or 'char_patterns'.")
