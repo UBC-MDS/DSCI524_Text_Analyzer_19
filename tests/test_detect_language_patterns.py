@@ -19,5 +19,3 @@ from textanalyzer.detect_language_patterns import detect_language_patterns
 def test_detect_language_patterns(messages, method, n, top_n, expected):
     result = detect_language_patterns(messages, method=method, n=n, top_n=top_n)
     assert result == expected
-
-
