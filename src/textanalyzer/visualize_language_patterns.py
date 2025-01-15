@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+from collections import Counter
+
 def visualize_language_patterns(patterns, method="language"):
     """
     Visualizes detected language patterns.
@@ -34,10 +37,9 @@ def visualize_language_patterns(patterns, method="language"):
         plt.title("Common Character Patterns")
         plt.xlabel("Character")
         plt.ylabel("Frequency")
+    
     else:
         raise ValueError("Unsupported method for visualization.")
+    
     plt.tight_layout()
     plt.show()
-
-
-    

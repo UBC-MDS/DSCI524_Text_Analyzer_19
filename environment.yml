@@ -12,6 +12,8 @@ dependencies:
   - myst-nb
   - pytest
   - jupyter
+  - pytest
+  - matplotlib
   - pip:
     - textblob
     - langdetect

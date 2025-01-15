@@ -27,15 +27,6 @@ def detect_language_patterns(messages, method="language", n=2, top_n=5):
     -------
     list
         A list of detected patterns based on the chosen method.
-
-    Examples
-    --------
-    >>> messages = ["Building A Python Package is fun!"]
-    >>> detect_language_patterns(messages, method="language")
-    ['en']
-
-    >>> detect_language_patterns(messages, method="ngrams", n=2, top_n=3)
-    [('building python', 1), ('python package', 1), ('package fun', 1)]
     """
     if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
         raise TypeError("messages must be a list of strings")
@@ -57,5 +48,3 @@ def detect_language_patterns(messages, method="language", n=2, top_n=5):
 
     else:
         raise ValueError("Unsupported method. Choose from 'language', 'ngrams', or 'char_patterns'.")
- 
-   
