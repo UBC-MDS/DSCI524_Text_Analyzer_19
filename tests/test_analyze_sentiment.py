@@ -5,7 +5,7 @@ from textanalyzer.sentiment_analysis import analyze_sentiment
     "messages, model",
     [
         # Default model detection
-        (["Hello World!", "Bonjour le monde!"], "default"),
+        (["Hello World!", "Bonjour le monde!"], "Default"),
         
         # Simple model detection - VADER
         (["testing for test model"], "VADER"),
@@ -17,4 +17,5 @@ from textanalyzer.sentiment_analysis import analyze_sentiment
 
 def test_analyze_sentiment(messages, model, expected):
     result = analyze_sentiment(messages, model)
+    print("analyze_sentiment result is: ", result)
     assert result == expected
