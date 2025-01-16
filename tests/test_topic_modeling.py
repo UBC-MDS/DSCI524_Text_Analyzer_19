@@ -1,4 +1,3 @@
-from typing import Literal
 import pytest
 
 from textanalyzer.topic_modeling import topic_modeling
