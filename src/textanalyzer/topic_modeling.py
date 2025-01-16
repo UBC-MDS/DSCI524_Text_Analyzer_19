@@ -11,8 +11,14 @@ def topic_modeling(documents, n_topics=5, n_words=10, random_state=123):
         random_state (int): Random seed for reproducibility. Optional, default set to 123.
         
     Returns:
-        topics (list of list): A list of topics, where each topic is a list of top words.
+        topics (list of list): A list of topics, where each topic is a list of its top representative words.
     """
+    if not isinstance(documents, list):
+        raise TypeError("Input documents should be a list of strings.")
+    for doc in documents:
+        if not isinstance(doc, str):
+            raise TypeError("Input documents should be a list of strings.")
+
     vectorizer = TfidfVectorizer(stop_words='english')
     tfidf_matrix = vectorizer.fit_transform(documents)
     
@@ -27,5 +33,4 @@ def topic_modeling(documents, n_topics=5, n_words=10, random_state=123):
         top_word_indices = topic_weights.argsort()[:-n_words - 1:-1]
         top_words = [feature_names[i] for i in top_word_indices]
         topics[f"Topic {topic_idx + 1}"] = top_words
-    
     return topics
