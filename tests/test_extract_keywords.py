@@ -13,9 +13,19 @@ from textanalyzer.extract_keywords import extract_keywords
     ]
 )
 
-
 def test_extract_keywords(messages, method, num_keywords, expected):
+    """Test function with valid data"""
     result = extract_keywords(messages, method=method, num_keywords=num_keywords)
     assert result == expected
+
+def test_invalid_message():
+    """Test function with invalid message"""
+    with pytest.raises(TypeError, match="messages must be a list of strings"):
+        extract_keywords([123, "Valid message"], method="tfidf", num_keywords=3)
+
+def test_invalid_method():
+    """Test function with invalid method"""
+    with pytest.raises(ValueError, match="Unsupported method"):
+        extract_keywords(["Valid message"], method="unsupported", num_keywords=3)
 
 
