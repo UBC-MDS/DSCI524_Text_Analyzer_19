@@ -27,6 +27,13 @@ def detect_language_patterns(messages, method="language", n=2, top_n=5):
     -------
     list
         A list of detected patterns based on the chosen method.
+
+    Raises
+    ------
+    TypeError
+        If messages is not a list of strings.
+    ValueError
+        If method is unsupported.
     """
     if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
         raise TypeError("messages must be a list of strings")
@@ -35,6 +42,8 @@ def detect_language_patterns(messages, method="language", n=2, top_n=5):
         return [detect(message) for message in messages]
 
     elif method == "ngrams":
+        if not isinstance(n, int) or n <= 0:
+            raise ValueError("Parameter 'n' must be a positive integer.")
         vectorizer = CountVectorizer(ngram_range=(n, n))
         ngrams = vectorizer.fit_transform(messages)
         sum_ngrams = ngrams.sum(axis=0)
