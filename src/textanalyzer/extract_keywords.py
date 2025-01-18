@@ -1,5 +1,4 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from rake_nltk import Rake
 
 def extract_keywords(messages, method="tfidf", num_keywords=5):
     """
