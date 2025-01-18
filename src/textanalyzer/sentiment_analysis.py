@@ -1,49 +1,51 @@
 from textblob import TextBlob
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from transformers import pipeline
 
-def analyze_sentiment(message, model="default"):
+def analyze_sentiment(message, model="Default"):
     """
-    Analyzes the sentiment of a given message and print alert message if it's highly negative
+    Analyzes the sentiment of a given message and prints an alert message if it's highly negative.
     
     Parameters:
     ----------
     message: str, the message to analyze.
     
     model: str, the model to use for sentiment analysis. 
-           the "default" model is TextBlob
-           the valid model is: "VADER" and "BERT"
+           the "Default" model is TextBlob.
     
     Returns:
     ----------
-    dict: return sentiment analysis score and it's label using specified model.
+    dict: return sentiment analysis score and its label using specified model.
     """
-    threshold = 0.2
-    # Default model using TextBlob
-    if model == "default":
-        blob = TextBlob(message)
-        polarity = blob.sentiment.polarity
-        if polarity < 0 and abs(polarity) >= threshold:
-            # Print the alert message
-            print(f"ALERT: Message: '{message}' is highly negative")
-        if polarity > 0:
-            return {"label": "positive", "score": polarity}
-        elif polarity < 0:
-            return {"label": "negative", "score": polarity}
+    threshold = 0.2  # Threshold for considering a message as "highly negative"
+    
+    results = []  
+    
+    if not isinstance(message, list):
+        raise TypeError("Input message should be a list of strings.")
+    
+    for m in message:
+        if model == "Default":
+            blob = TextBlob(m)
+            polarity = blob.sentiment.polarity
+            result = {
+                "message": m,
+                "score": polarity
+            }
+            
+            # Check for highly negative message
+            if polarity < 0 and abs(polarity) >= threshold:
+                print(f"ALERT: Message is highly negative - {m}")
+                result["alert"] = True  # Marking that the message is highly negative
+            
+            # Categorize sentiment
+            if polarity > 0:
+                result["label"] = "positive"
+            elif polarity < 0:
+                result["label"] = "negative"
+            else:
+                result["label"] = "neutral"
+            
+            results.append(result)
+    
         else:
-            return {"label": "neutral", "score": polarity}
-    
-    # Custom transformer model
-    elif model not in ["VADER", "BERT"]:
-            # if the model is not recognized, raise value error
-            raise ValueError("Sentiment Analysis model is not recognized, please use a valid model")
-    else:
-        if model == "VADER":
-            sentiment_analysis = SentimentIntensityAnalyzer()
-        else:
-            sentiment_analysis = pipeline("sentiment-analysis")
-        sentiment = sentiment_pipeline(message)[0]
-        return {"label": sentiment['label'].lower(), "score": sentiment['score']}
-    
-
-    
+            raise ValueError("Sentiment Analysis model is not recognized. Please use a valid model 'Default'.")
+    return results
