@@ -22,10 +22,10 @@ from textanalyzer.sentiment_analysis import analyze_sentiment
 
 def test_analyze_sentiment(messages, model, expected):
     if isinstance(expected, type) and issubclass(expected, Exception):
-        # If the expected result is an exception, we need to check for that
+        # Check for expected errors
         with pytest.raises(expected):
             analyze_sentiment(messages, model)
     else:
-        # Otherwise, test for the expected result when no exception is expected
+        # Check for expected usual outputs
         result = analyze_sentiment(messages, model)
         assert result == expected

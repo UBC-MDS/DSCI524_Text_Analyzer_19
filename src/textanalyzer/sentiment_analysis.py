@@ -13,7 +13,7 @@ def analyze_sentiment(message, model="Default"):
     
     Returns:
     ----------
-    dict: return sentiment analysis score and its label using specified model.
+    dict: return sentiment analysis score and its polarity: "positive", "negative" and "neutral".
     """
     threshold = 0.2  # Threshold for considering a message as "highly negative"
     
@@ -34,7 +34,7 @@ def analyze_sentiment(message, model="Default"):
             # Check for highly negative message
             if polarity < 0 and abs(polarity) >= threshold:
                 print(f"ALERT: Message is highly negative - {m}")
-                result["alert"] = True  # Marking that the message is highly negative
+                result["alert"] = True  
             
             # Categorize sentiment
             if polarity > 0:
