@@ -19,8 +19,8 @@ def analyze_sentiment(message, model="Default"):
     
     results = []  
     
-    if not isinstance(message, list):
-        raise TypeError("Input message should be a list of strings.")
+    if not isinstance(message, list) or not all(isinstance(msg, str) for msg in message):
+        raise TypeError("messages must be a list of strings")
     
     for m in message:
         if model == "Default":

@@ -10,6 +10,9 @@ from textanalyzer.sentiment_analysis import analyze_sentiment
         
         # Invalid input message detection
         ("I love this movie! It's amazing and so entertaining.", "Default", TypeError),
+
+        # Invalid input message detection
+        (["I love this movie! It's amazing and so entertaining.", 2], "Default", TypeError),
         
         # Multiple input message detection
         (["I love this movie! It's amazing and so entertaining.", "Hello! This is Tom!"], "Default",
@@ -78,3 +81,12 @@ def test_analyze_sentiment(messages, model, expected):
         # Check for expected usual outputs
         result = analyze_sentiment(messages, model)
         assert result == expected
+
+def test_alert_on_highly_negative_message(capfd):
+    """Test to verify that the 'analyze_sentiment' function correctly identifies and handles highly negative messages by triggering an alert."""
+    messages = ["This is absolutely terrible."]
+    results = analyze_sentiment(messages)
+    out, _ = capfd.readouterr()
+    assert "ALERT: Message is highly negative" in out
+    assert results[0]["label"] == "negative"
+    assert results[0]["alert"] is True
