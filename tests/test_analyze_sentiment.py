@@ -10,6 +10,9 @@ from textanalyzer.sentiment_analysis import analyze_sentiment
         
         # Invalid input message detection
         ("I love this movie! It's amazing and so entertaining.", "Default", TypeError),
+
+        # Invalid input message detection
+        (["I love this movie! It's amazing and so entertaining.", 2], "Default", TypeError),
         
         # Multiple input message detection
         (["I love this movie! It's amazing and so entertaining.", "Hello! This is Tom!"], "Default",
