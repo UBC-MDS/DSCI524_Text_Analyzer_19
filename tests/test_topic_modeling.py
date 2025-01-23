@@ -14,16 +14,16 @@ sample_text = [
     "test_n_topics, test_n_words, expected",
     [
         (5, 3, {
-            'Topic 1': ['hidden', 'experience', 'unforgettable'], 
-            'Topic 2': ['revolutionize', 'quantum', 'computing'], 
-            'Topic 3': ['intelligence', 'machine', 'globe'], 
-            'Topic 4': ['yoga', 'stress', 'health'], 
-            'Topic 5': ['basketball', 'victory', 'thrilling']
+            'Topic 1': ['revolutionize', 'quantum', 'computing'],
+            'Topic 2': ['basketball', 'victory', 'thrilling'],
+            'Topic 3': ['yoga', 'stress', 'health'],
+            'Topic 4': ['intelligence', 'machine', 'globe'],
+            'Topic 5': ['hidden', 'experience', 'unforgettable']
         }),
         (3, 7, {
-            'Topic 1': ['quantum', 'computing', 'cryptography', 'data', 'expected', 'revolutionize', 'processing'], 
-            'Topic 2': ['seconds', 'basketball', 'final', 'thrilling', 'team', 'secured', 'victory'], 
-            'Topic 3': ['exploring', 'unforgettable', 'traveler', 'bali', 'beaches', 'hidden', 'experience']
+            'Topic 1': ['intelligence', 'machine', 'globe', 'industries', 'learning', 'artificial', 'transforming'],
+            'Topic 2': ['thrilling', 'team', 'basketball', 'secured', 'seconds', 'game', 'final'],
+            'Topic 3': ['yoga', 'stress', 'improving', 'meditation', 'mental', 'excellent', 'reducing']
         }),
         (15, 4, {
             'Topic 1': ['processing', 'data', 'quantum', 'expected'], 

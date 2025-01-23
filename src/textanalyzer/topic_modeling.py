@@ -22,7 +22,7 @@ def topic_modeling(documents, n_topics=5, n_words=10, random_state=123):
     vectorizer = TfidfVectorizer(stop_words='english')
     tfidf_matrix = vectorizer.fit_transform(documents)
     
-    nmf_model = NMF(n_components=n_topics, random_state=random_state)
+    nmf_model = NMF(n_components=n_topics, random_state=random_state, init='random')
     W = nmf_model.fit_transform(tfidf_matrix)
     H = nmf_model.components_
     
