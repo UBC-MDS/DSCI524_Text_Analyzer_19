@@ -14,7 +14,7 @@ $ pip install textanalyzer
 ## Usage
 
 - `analyze_sentiment(message, model="default")`: This function analyzes the sentiment of a given message and prints alert message if it's highly negative. 
-- `topic_modeling()`: This function performs topic extraction from a list of texts and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization. 
+- `topic_modeling(messages, n_topics=5, n_words=10, random_state=123)`: This function extracts topics from a list of messages and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization. 
 - `extract_keywords(messages, method="tfidf", num_keywords=5)`: This function extracts the top keywords from a list of messages using specified methods like TF-IDF or RAKE.
 - `detect_language_patterns(messages, method="language", n=2, top_n=5)`: This function detects language patterns such as detected languages, common n-grams, or character usage patterns from a list of messages.
 - `visualize_language_patterns(patterns, method="language")`: This function visualizes the detected language patterns using bar charts for language frequency, n-grams, or character patterns.

@@ -14,16 +14,16 @@ sample_text = [
     "test_n_topics, test_n_words, expected",
     [
         (5, 3, {
-            'Topic 1': ['hidden', 'experience', 'unforgettable'], 
-            'Topic 2': ['revolutionize', 'quantum', 'computing'], 
-            'Topic 3': ['intelligence', 'machine', 'globe'], 
-            'Topic 4': ['yoga', 'stress', 'health'], 
-            'Topic 5': ['basketball', 'victory', 'thrilling']
+            'Topic 1': ['data', 'expected', 'processing'],
+            'Topic 2': ['basketball', 'team', 'secured'],
+            'Topic 3': ['yoga', 'mental', 'meditation'],
+            'Topic 4': ['transforming', 'machine', 'industries'],
+            'Topic 5': ['unforgettable', 'traveler', 'exploring'],
         }),
         (3, 7, {
-            'Topic 1': ['quantum', 'computing', 'cryptography', 'data', 'expected', 'revolutionize', 'processing'], 
-            'Topic 2': ['seconds', 'basketball', 'final', 'thrilling', 'team', 'secured', 'victory'], 
-            'Topic 3': ['exploring', 'unforgettable', 'traveler', 'bali', 'beaches', 'hidden', 'experience']
+            'Topic 1': ['transforming', 'machine', 'industries', 'intelligence', 'learning', 'artificial', 'globe'],
+            'Topic 2': ['victory', 'seconds', 'secured', 'team', 'thrilling', 'final', 'basketball'],
+            'Topic 3': ['yoga', 'mental', 'meditation', 'reducing', 'stress', 'improving', 'health'],
         }),
         (15, 4, {
             'Topic 1': ['processing', 'data', 'quantum', 'expected'], 
@@ -36,7 +36,7 @@ sample_text = [
             'Topic 8': ['artificial', 'industries', 'intelligence', 'transforming'], 
             'Topic 9': ['seconds', 'victory', 'team', 'final'], 
             'Topic 10': ['quantum', 'processing', 'data', 'cryptography'], 
-            'Topic 11': ['yoga', 'industries', 'hidden', 'health'], 
+            'Topic 11': ['transforming', 'yoga', 'victory', 'unforgettable'], 
             'Topic 12': ['game', 'thrilling', 'team', 'secured'], 
             'Topic 13': ['intelligence', 'globe', 'industries', 'artificial'], 
             'Topic 14': ['bali', 'experience', 'traveler', 'exploring'], 
@@ -53,18 +53,18 @@ def test_topic_modeling(test_n_topics, test_n_words, expected):
 def test_topic_modeling_wrong_input():
     """This tests if the function throws a TypeError when the input is not a list of strings."""
     with pytest.raises(TypeError):
-        topic_modeling(documents = -1)
+        topic_modeling(messages = -1)
     with pytest.raises(TypeError):
-        topic_modeling(documents = 'Hello, this is a test.')
+        topic_modeling(messages = 'Hello, this is a test.')
     with pytest.raises(TypeError):
-        topic_modeling(documents = ['Hello, I am', ' ', 90, '.'])
+        topic_modeling(messages = ['Hello, I am', ' ', 90, '.'])
 
 def test_topic_modeling_bad_input():
     """This tests if the function throws a ValueError when the input is a list of empty strings or stop words"""
     with pytest.raises(ValueError):
-        topic_modeling(documents = [' '])
+        topic_modeling(messages = [' '])
     with pytest.raises(ValueError):
-        topic_modeling(documents = ['is'])
+        topic_modeling(messages = ['is'])
     with pytest.raises(ValueError):
-        topic_modeling(documents = [' ', '', 'is are'])
+        topic_modeling(messages = [' ', '', 'is are'])
     
