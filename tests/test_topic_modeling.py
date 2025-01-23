@@ -53,18 +53,18 @@ def test_topic_modeling(test_n_topics, test_n_words, expected):
 def test_topic_modeling_wrong_input():
     """This tests if the function throws a TypeError when the input is not a list of strings."""
     with pytest.raises(TypeError):
-        topic_modeling(documents = -1)
+        topic_modeling(messages = -1)
     with pytest.raises(TypeError):
-        topic_modeling(documents = 'Hello, this is a test.')
+        topic_modeling(messages = 'Hello, this is a test.')
     with pytest.raises(TypeError):
-        topic_modeling(documents = ['Hello, I am', ' ', 90, '.'])
+        topic_modeling(messages = ['Hello, I am', ' ', 90, '.'])
 
 def test_topic_modeling_bad_input():
     """This tests if the function throws a ValueError when the input is a list of empty strings or stop words"""
     with pytest.raises(ValueError):
-        topic_modeling(documents = [' '])
+        topic_modeling(messages = [' '])
     with pytest.raises(ValueError):
-        topic_modeling(documents = ['is'])
+        topic_modeling(messages = ['is'])
     with pytest.raises(ValueError):
-        topic_modeling(documents = [' ', '', 'is are'])
+        topic_modeling(messages = [' ', '', 'is are'])
     
