@@ -1,11 +1,11 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
-def topic_modeling(documents, n_topics=5, n_words=10, random_state=123):
+def topic_modeling(messages, n_topics=5, n_words=10, random_state=123):
     """
     Perform topic modeling using Non-negative Matrix Factorization (NMF).
     
     Parameters:
-        documents (list of str): List of text documents for topic modeling.
+        messages (list of str): List of text for topic modeling.
         n_topics (int): Number of topics to extract. Optional, default set to 5.
         n_words (int): Number of top words to display per topic. Optional, default set to 10.
         random_state (int): Random seed for reproducibility. Optional, default set to 123.
@@ -13,14 +13,14 @@ def topic_modeling(documents, n_topics=5, n_words=10, random_state=123):
     Returns:
         topics (list of list): A list of topics, where each topic is a list of its top representative words.
     """
-    if not isinstance(documents, list):
-        raise TypeError("Input documents should be a list of strings.")
-    for doc in documents:
+    if not isinstance(messages, list):
+        raise TypeError("Input messages should be a list of strings.")
+    for doc in messages:
         if not isinstance(doc, str):
-            raise TypeError("Input documents should be a list of strings.")
+            raise TypeError("Input messages should be a list of strings.")
 
     vectorizer = TfidfVectorizer(stop_words='english')
-    tfidf_matrix = vectorizer.fit_transform(documents)
+    tfidf_matrix = vectorizer.fit_transform(messages)
     
     nmf_model = NMF(n_components=n_topics, random_state=random_state, init='random')
     W = nmf_model.fit_transform(tfidf_matrix)
