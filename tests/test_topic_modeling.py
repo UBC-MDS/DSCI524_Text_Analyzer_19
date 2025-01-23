@@ -14,16 +14,16 @@ sample_text = [
     "test_n_topics, test_n_words, expected",
     [
         (5, 3, {
-            'Topic 1': ['revolutionize', 'quantum', 'computing'],
-            'Topic 2': ['basketball', 'victory', 'thrilling'],
-            'Topic 3': ['yoga', 'stress', 'health'],
-            'Topic 4': ['intelligence', 'machine', 'globe'],
-            'Topic 5': ['hidden', 'experience', 'unforgettable']
+            'Topic 1': ['data', 'expected', 'processing'],
+            'Topic 2': ['basketball', 'team', 'secured'],
+            'Topic 3': ['yoga', 'mental', 'meditation'],
+            'Topic 4': ['transforming', 'machine', 'industries'],
+            'Topic 5': ['unforgettable', 'traveler', 'exploring'],
         }),
         (3, 7, {
-            'Topic 1': ['intelligence', 'machine', 'globe', 'industries', 'learning', 'artificial', 'transforming'],
-            'Topic 2': ['thrilling', 'team', 'basketball', 'secured', 'seconds', 'game', 'final'],
-            'Topic 3': ['yoga', 'stress', 'improving', 'meditation', 'mental', 'excellent', 'reducing']
+            'Topic 1': ['transforming', 'machine', 'industries', 'intelligence', 'learning', 'artificial', 'globe'],
+            'Topic 2': ['victory', 'seconds', 'secured', 'team', 'thrilling', 'final', 'basketball'],
+            'Topic 3': ['yoga', 'mental', 'meditation', 'reducing', 'stress', 'improving', 'health'],
         }),
         (15, 4, {
             'Topic 1': ['processing', 'data', 'quantum', 'expected'], 
@@ -36,7 +36,7 @@ sample_text = [
             'Topic 8': ['artificial', 'industries', 'intelligence', 'transforming'], 
             'Topic 9': ['seconds', 'victory', 'team', 'final'], 
             'Topic 10': ['quantum', 'processing', 'data', 'cryptography'], 
-            'Topic 11': ['yoga', 'industries', 'hidden', 'health'], 
+            'Topic 11': ['transforming', 'yoga', 'victory', 'unforgettable'], 
             'Topic 12': ['game', 'thrilling', 'team', 'secured'], 
             'Topic 13': ['intelligence', 'globe', 'industries', 'artificial'], 
             'Topic 14': ['bali', 'experience', 'traveler', 'exploring'], 
