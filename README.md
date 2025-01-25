@@ -1,5 +1,7 @@
 # txtanalyzer
 
+[![Documentation Status](https://readthedocs.org/projects/dsci524-text-analyzer-19/badge/?version=latest)](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest)
+
 `txtanalyzer` includes powerful tools to perform natural language processing on English texts.
 
 `txtanalyzer` is a Python package designed for performing comprehensive Natural Language Processing (NLP) tasks on English texts. This package provides tools for sentiment analysis, keyword extraction, topic modeling, and the detection and visualization of language patterns, making it ideal for text mining and content analysis projects.
