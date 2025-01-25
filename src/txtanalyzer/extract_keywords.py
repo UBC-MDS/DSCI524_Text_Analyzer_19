@@ -46,20 +46,16 @@ def extract_keywords(messages, method="tfidf", num_keywords=5):
                 
             msg_vector = tf_idf_vector[i].toarray().flatten()
 
-            keywords = sorted(zip(msg_vector, feature_names), reverse= True)[:num_keywords]
+            keywords = sorted(zip(msg_vector, feature_names), reverse= True)
 
-            print(keywords)
-
-            n_keywords = [word for _, word in keywords]
-
-            print(n_keywords)
+            n_keywords = [word for _, word in keywords[:num_keywords]]
                 
             top_keywords.append(n_keywords)
 
     else:
         raise ValueError("Unsupported method. Only 'tfidf' is available.")
 
-
+    
     return top_keywords
 
         
