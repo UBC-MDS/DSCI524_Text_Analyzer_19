@@ -1,5 +1,5 @@
 import pytest
-from textanalyzer.visualize_language_patterns import visualize_language_patterns
+from txtanalyzer.visualize_language_patterns import visualize_language_patterns
 
 sample_text = [
     "Artificial intelligence and machine learning are transforming industries around the globe.",
