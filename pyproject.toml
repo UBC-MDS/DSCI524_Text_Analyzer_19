@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "textanalyzer"
-version = "0.1.0"
+name = "txtanalyzer"
+version = "0.2.0"
 description = "This package includes powerful tools to perform natural language processing on English texts."
 authors = ["Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin"]
 license = "MIT"
