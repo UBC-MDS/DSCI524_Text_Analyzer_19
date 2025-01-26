@@ -18,7 +18,6 @@ $ pip install txtanalyzer
 -   `topic_modeling(messages, n_topics=5, n_words=10, random_state=123)`: This function extracts topics from a list of messages and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization.
 -   `extract_keywords(messages, method="tfidf", num_keywords=5)`: This function extracts the top keywords from a list of messages using specified methods like TF-IDF or RAKE.
 -   `detect_language_patterns(messages, method="language", n=2, top_n=5)`: This function detects language patterns such as detected languages, common n-grams, or character usage patterns from a list of messages.
--   `visualize_language_patterns(patterns, method="language")`: This function visualizes the detected language patterns using bar charts for language frequency, n-grams, or character patterns.
 
 ## Ecosystem Fit
 
@@ -36,7 +35,6 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 -   [`langdetect`](https://pypi.org/project/langdetect/): For language detection.
 -   [`scikit-learn`](https://scikit-learn.org/): For keyword extraction, n-gram analysis (`CountVectorizer`), and topic modeling.
 -   [`collections.Counter`](https://docs.python.org/3/library/collections.html): For frequency analysis.
--   [`matplotlib`](https://matplotlib.org): For language patterens visualizations.
 
 ## License
 
