@@ -1,5 +1,5 @@
 import pytest
-from txtanalyzer.sentiment_analysis import analyze_sentiment
+from messageanalyzer.sentiment_analysis import analyze_sentiment
 
 @pytest.mark.parametrize(
     "messages, model, expected",

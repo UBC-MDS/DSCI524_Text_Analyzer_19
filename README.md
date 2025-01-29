@@ -1,15 +1,15 @@
-# txtanalyzer
+# messageanalyzer
 
 [![Documentation Status](https://readthedocs.org/projects/dsci524-text-analyzer-19/badge/?version=latest)](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest)
 
-`txtanalyzer` includes powerful tools to perform natural language processing on English texts.
+`messageanalyzer` includes powerful tools to perform natural language processing on English texts.
 
-`txtanalyzer` is a Python package designed for performing comprehensive Natural Language Processing (NLP) tasks on English texts. This package provides tools for sentiment analysis, keyword extraction, topic modeling, and the detection and visualization of language patterns, making it ideal for text mining and content analysis projects.
+`messageanalyzer` is a Python package designed for performing comprehensive Natural Language Processing (NLP) tasks on English texts. This package provides tools for sentiment analysis, keyword extraction, topic modeling, and the detection and visualization of language patterns, making it ideal for text mining and content analysis projects.
 
 ## Installation
 
 ``` bash
-$ pip install txtanalyzer
+$ pip install messageanalyzer
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ $ pip install txtanalyzer
 
 ## Ecosystem Fit
 
-`txtanalyzer` integrates into the Python NLP ecosystem by offering a simple yet powerful toolkit for analyzing text data. While other Python libraries like [NLTK](https://www.nltk.org/) and [spaCy](https://spacy.io/) provide extensive NLP functionalities, `txtanalyzer` focuses on making sentiment analysis, keyword extraction, and language pattern visualization more accessible and user-friendly.
+`messageanalyzer` integrates into the Python NLP ecosystem by offering a simple yet powerful toolkit for analyzing text data. While other Python libraries like [NLTK](https://www.nltk.org/) and [spaCy](https://spacy.io/) provide extensive NLP functionalities, `messageanalyzer` focuses on making sentiment analysis, keyword extraction, and language pattern visualization more accessible and user-friendly.
 
 For keyword extraction, packages like [YAKE](https://github.com/LIAAD/yake) and [RAKE-NLTK](https://pypi.org/project/rake-nltk/) provide similar functionality. However, TextAnalyzer combines these tasks into a unified and streamlined workflow.
 
@@ -38,8 +38,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`txtanalyzer` was created by Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin. It is licensed under the terms of the MIT license.
+`messageanalyzer` was created by Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`txtanalyzer` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`messageanalyzer` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).

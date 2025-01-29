@@ -1,5 +1,5 @@
 import pytest
-from txtanalyzer.extract_keywords import extract_keywords
+from messageanalyzer.extract_keywords import extract_keywords
 
 @pytest.mark.parametrize(
     "messages, method, num_keywords, expected",
