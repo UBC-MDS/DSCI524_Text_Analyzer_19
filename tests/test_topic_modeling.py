@@ -1,6 +1,6 @@
 import pytest
 
-from txtanalyzer.topic_modeling import topic_modeling
+from messageanalyzer.topic_modeling import topic_modeling
 
 sample_text = [
     "Artificial intelligence and machine learning are transforming industries around the globe.",
