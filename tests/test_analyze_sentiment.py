@@ -103,8 +103,14 @@ def test_alert_on_highly_negative_message(capfd):
 
     Behavior:
     ----------
-    - If the stdout from 
+    - If the stdout from snapshots matches the output message from readouterr(), then nothing will be printed
+    - If the stdout from snapshots does not match the output message from readouterr(), AssertionError will be printed.
+
+    Example:
+    -------------------
+    analyze_sentiment(["This is absolutely terrible."])
     """
+    
     messages = ["This is absolutely terrible."]
     results = analyze_sentiment(messages)
     out, _ = capfd.readouterr()
