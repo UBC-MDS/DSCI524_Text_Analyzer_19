@@ -23,6 +23,7 @@ from messageanalyzer.sentiment_analysis import analyze_sentiment
     ]
 )
 
+# This test implement several cases, and testing for default model detection, invalid input detection, invalid model detection, multiple input detection
 def test_analyze_sentiment(messages, model, expected):
     """
     Tests the 'analyze_sentiment' function by verifying its behavior under different input conditions.
@@ -78,8 +79,9 @@ def test_analyze_sentiment(messages, model, expected):
     Invalid input detection:
             test_analyze_sentiment(["Hello!"], "Model", ValueError)
     """
+
     if isinstance(expected, type) and issubclass(expected, Exception):
-        # Check for expected errors
+        # Check if the expected result is in exception type 
         with pytest.raises(expected):
             analyze_sentiment(messages, model)
     else:
@@ -87,8 +89,22 @@ def test_analyze_sentiment(messages, model, expected):
         result = analyze_sentiment(messages, model)
         assert result == expected
 
+# This test checks if alert will be printed if message is highly negative
 def test_alert_on_highly_negative_message(capfd):
-    """Test to verify that the 'analyze_sentiment' function correctly identifies and handles highly negative messages by triggering an alert."""
+    """
+    Test to verify that the 'analyze_sentiment' function correctly identifies and handles highly 
+    negative messages by triggering an alert.
+
+     
+    Parameters:
+    -----------
+    capfd: object
+        An object that catches output from stdout
+
+    Behavior:
+    ----------
+    - If the stdout from 
+    """
     messages = ["This is absolutely terrible."]
     results = analyze_sentiment(messages)
     out, _ = capfd.readouterr()
