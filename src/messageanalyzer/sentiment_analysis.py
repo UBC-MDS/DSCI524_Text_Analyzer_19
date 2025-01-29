@@ -13,7 +13,13 @@ def analyze_sentiment(message, model="Default"):
     
     Returns:
     ----------
-    dict: return sentiment analysis score and its polarity: "positive", "negative" and "neutral".
+    dict: a dictionary, return each original message, with its sentiment score, 
+            and labels indicating its polarity: "positive", "negative" and "neutral".
+            Alert will be printed if some messages are highly negative, and these messages will be displayed.
+
+    Example:
+    ----------
+    analyze_sentiment(sample_text, "Default")
     """
     threshold = 0.2  # Threshold for considering a message as "highly negative"
     
