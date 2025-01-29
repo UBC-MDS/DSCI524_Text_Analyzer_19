@@ -71,7 +71,12 @@ def test_analyze_sentiment(messages, model, expected):
     
     Example Usage:
     --------------
-    test_analyze_sentiment(["Hello!"], "Model", ValueError)
+    Default model detection: 
+            test_analyze_sentiment(["I love this movie! It's amazing and so entertaining."], "Default", 
+            [{'message': "I love this movie! It's amazing and so entertaining.", 'score': 0.5750000000000001, 'label': 'positive'}])
+            
+    Invalid input detection:
+            test_analyze_sentiment(["Hello!"], "Model", ValueError)
     """
     if isinstance(expected, type) and issubclass(expected, Exception):
         # Check for expected errors
