@@ -12,10 +12,14 @@ $ pip install messageanalyzer
 
 ## Usage
 
--   **`analyze_sentiment(messages: List[str], model: str = "Default")  -> List[Dict[str, Union[str, float, bool]]]`**: This function analyzes the sentiment of a list of given messages and returns the sentiment scores and labels for each messange and prints alert message if it's highly negative.
--   **`topic_modeling(messages: List[str], n_topics: int = 5, n_words: int = 10, random_state: int = 123) -> Dict[str, List[str]]`**: This function extracts topics from a list of messages and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization.
--   **`extract_keywords(messages: List[str], num_keywords: int = 5) -> List[List[str]]`**: This function extracts the top keywords from a list of messages.
--   **`detect_language_patterns(messages: List[str], method: str = "language", n: int = 2, top_n: int = 5) -> Union[List[str], List[Tuple[str, int]]]`**: This function detects language patterns such as detected languages, common n-grams, or character usage patterns from a list of messages.
+-   **`analyze_sentiment(messages: List[str], model: str = "Default")  -> List[dict]`**:\
+    This function analyzes the sentiment of a list of given messages and returns the sentiment scores and labels for each messange and prints alert message if it's highly negative.
+-   **`topic_modeling(messages: List[str], n_topics: int = 5, n_words: int = 10, random_state: int = 123) -> dict`**:\
+    This function extracts topics from a list of messages and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization.
+-   **`extract_keywords(messages: List[str], num_keywords: int = 5) -> list`**:\
+    This function extracts the top keywords from a list of messages.
+-   **`detect_language_patterns(messages: List[str], method: str = "language", n: int = 2, top_n: int = 5) -> list`**:\
+    This function detects language patterns such as detected languages, common n-grams, or character usage patterns from a list of messages.
 
 ## Ecosystem Fit
 
