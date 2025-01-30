@@ -1,10 +1,18 @@
 [tool.poetry]
 name = "messageanalyzer"
-version = "0.2.0"
+version = "1.0.0"
 description = "This package includes powerful tools to perform natural language processing on English texts."
 authors = ["Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin"]
 license = "MIT"
 readme = "README.md"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
+branch = "main"                                      # branch to make releases of
+changelog_file = "CHANGELOG.md"                      # changelog file
+build_command = "pip install poetry && poetry build" # build dists
 
 [tool.poetry.dependencies]
 python = "^3.9"
