@@ -25,7 +25,7 @@ $ pip install messageanalyzer
 
 `messageanalyzer` integrates into the Python NLP ecosystem by offering a simple yet powerful toolkit for analyzing text data. While other Python libraries like [NLTK](https://www.nltk.org/) and [spaCy](https://spacy.io/) provide extensive NLP functionalities, `messageanalyzer` focuses on making sentiment analysis, keyword extraction, and language pattern visualization more accessible and user-friendly.
 
-For keyword extraction, packages like [YAKE](https://github.com/LIAAD/yake) and [RAKE-NLTK](https://pypi.org/project/rake-nltk/) provide similar functionality. However, TextAnalyzer combines these tasks into a unified and streamlined workflow.
+For keyword extraction, packages like [YAKE](https://github.com/LIAAD/yake) and [RAKE-NLTK](https://pypi.org/project/rake-nltk/) provide similar functionality. However, `messageanalyzer` combines these tasks into a unified and streamlined workflow.
 
 ## Contributing
 
