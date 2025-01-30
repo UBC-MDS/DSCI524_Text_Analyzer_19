@@ -35,8 +35,8 @@ def analyze_sentiment(messages: List[str], model: str = "Default")  -> List[Dict
     ----------
     >>> messages = ["I love this!", "This is terrible."]
     >>> analyze_sentiment(messages, "Default")
-    [{'messages': 'I love this!', 'score': 0.5, 'label': 'positive'},
-     {'messages': 'This is terrible.', 'score': -1.0, 'label': 'negative', 'alert': True}]
+    [{'message': 'I love this!', 'score': 0.5, 'label': 'positive'},
+     {'message': 'This is terrible.', 'score': -1.0, 'label': 'negative', 'alert': True}]
     """
     threshold = 0.2  # Threshold for considering a message as "highly negative"
     
@@ -50,7 +50,7 @@ def analyze_sentiment(messages: List[str], model: str = "Default")  -> List[Dict
             blob = TextBlob(m)
             polarity = blob.sentiment.polarity
             result = {
-                "messages": m,
+                "message": m,
                 "score": polarity
             }
             
