@@ -1,6 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-def extract_keywords(messages, method="tfidf", num_keywords=5):
+def extract_keywords(messages: list[str], num_keywords: int = 5) -> list[list[str]]:
+    
     """
     Extracts top keywords from the list of messages using the given methods.
 
@@ -32,29 +33,24 @@ def extract_keywords(messages, method="tfidf", num_keywords=5):
     if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
         raise TypeError("messages must be a list of strings")
     
-    if method == 'tfidf':
     
-        tf_idf_vectorizer = TfidfVectorizer(stop_words='english')
+    tf_idf_vectorizer = TfidfVectorizer(stop_words='english')
 
-        tf_idf_vector = tf_idf_vectorizer.fit_transform(messages)
+    tf_idf_vector = tf_idf_vectorizer.fit_transform(messages)
 
-        feature_names = tf_idf_vectorizer.get_feature_names_out()
+    feature_names = tf_idf_vectorizer.get_feature_names_out()
 
-        top_keywords = []
+    top_keywords = []
 
-        for i in range(len(messages)):
+    for i in range(len(messages)):
                 
-            msg_vector = tf_idf_vector[i].toarray().flatten()
+        msg_vector = tf_idf_vector[i].toarray().flatten()
 
-            keywords = sorted(zip(msg_vector, feature_names), reverse= True)
+        keywords = sorted(zip(msg_vector, feature_names), reverse= True)
 
-            n_keywords = [word for _, word in keywords[:num_keywords]]
+        n_keywords = [word for _, word in keywords[:num_keywords]]
                 
-            top_keywords.append(n_keywords)
-
-    else:
-        raise ValueError("Unsupported method. Only 'tfidf' is available.")
-
+        top_keywords.append(n_keywords)
     
     return top_keywords
 
