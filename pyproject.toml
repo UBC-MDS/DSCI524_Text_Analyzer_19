@@ -6,6 +6,14 @@ authors = ["Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin"]
 license = "MIT"
 readme = "README.md"
 
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
+branch = "main"                                      # branch to make releases of
+changelog_file = "CHANGELOG.md"                      # changelog file
+build_command = "pip install poetry && poetry build" # build dists
+
 [tool.poetry.dependencies]
 python = "^3.9"
 scikit-learn = "^1.6.1"
