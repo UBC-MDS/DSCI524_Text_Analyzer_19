@@ -1,43 +1,60 @@
+from typing import List, Dict, Union
 from textblob import TextBlob
 
-def analyze_sentiment(message, model="Default"):
+def analyze_sentiment(messages: List[str], model: str = "Default")  -> List[Dict[str, Union[str, float, bool]]]:
     """
-    Analyzes the sentiment of a given message and prints an alert message if it's highly negative.
+    This function analyzes the sentiment of a list of given messages 
+    and returns the sentiment scores and labels for each messange and prints alert message if it's highly negative.
     
-    Parameters:
+    Parameters
     ----------
-    message: str, the message to analyze.
+    messages: List[str]
+        The messages to analyze.
     
-    model: str, the model to use for sentiment analysis. 
-           the "Default" model is TextBlob.
+    model: str, optional
+        The model to use for sentiment analysis. The "Default" model is TextBlob.
     
-    Returns:
+    Returns
     ----------
-    dict: a dictionary, return each original message, with its sentiment score, 
-            and labels indicating its polarity: "positive", "negative" and "neutral".
-            Alert will be printed if some messages are highly negative, and these messages will be displayed.
+    List[Dict[str, Union[str, float, bool]]]
+        A list of dictionaries, where each dictionary contains:
+        - "messages": The original message.
+        - "score": The sentiment polarity score.
+        - "label": The sentiment category ("positive", "negative", "neutral").
+        - "alert" (optional): True if the message is highly negative.
+        Alert will be printed if some messages are highly negative, and these messages will be displayed.
 
-    Example:
+    Raises
+    ------
+    TypeError
+        If `messages` is not a list of strings.
+    ValueError
+        If an unrecognized sentiment analysis model is provided.
+
+    Example
     ----------
-    analyze_sentiment(sample_text, "Default")
+    >>> messages = ["I love this!", "This is terrible."]
+    >>> analyze_sentiment(messages, "Default")
+    [{'messages': 'I love this!', 'score': 0.5, 'label': 'positive'},
+     {'messages': 'This is terrible.', 'score': -1.0, 'label': 'negative', 'alert': True}]
     """
     threshold = 0.2  # Threshold for considering a message as "highly negative"
     
     results = []  
     
-    if not isinstance(message, list) or not all(isinstance(msg, str) for msg in message):
+    if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
         raise TypeError("messages must be a list of strings")
     
-    for m in message:
+    for m in messages:
         if model == "Default":
             blob = TextBlob(m)
             polarity = blob.sentiment.polarity
             result = {
-                "message": m,
+                "messages": m,
                 "score": polarity
             }
             
-            # Check for highly negative message
+            # Check for highly negative messages
             if polarity < 0 and abs(polarity) >= threshold:
                 print(f"ALERT: Message is highly negative - {m}")
                 result["alert"] = True  
