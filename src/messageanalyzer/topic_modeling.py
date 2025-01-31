@@ -1,12 +1,13 @@
+from typing import List, Dict
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import NMF
-def topic_modeling(messages, n_topics=5, n_words=10, random_state=123):
+def topic_modeling(messages: List[str], n_topics: int = 5, n_words: int = 10, random_state: int = 123) -> Dict[str, List[str]]:
     """
     Perform topic modeling using Non-negative Matrix Factorization (NMF).
 
     Parameters
     ----------
-    messages : list of str
+    messages : List[str]
         List of messages for topic modeling.
     n_topics : int, optional
         Number of topics to extract, by default 5.
@@ -17,8 +18,13 @@ def topic_modeling(messages, n_topics=5, n_words=10, random_state=123):
 
     Returns
     -------
-    dict of list of str
-        A list of topics, where each topic is a list of its top representative words.
+    Dict[str, List[str]]
+        A dictionary where each key is a topic label (e.g., "Topic 1") and each value is a list of the most representative words for that topic.
+
+    Raises
+    ------
+    TypeError
+        If `messages` is not a list of strings.
 
     Examples
     --------

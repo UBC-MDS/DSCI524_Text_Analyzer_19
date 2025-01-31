@@ -1,25 +1,31 @@
+from typing import List
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-def extract_keywords(messages: list[str], num_keywords: int = 5) -> list[list[str]]:
+def extract_keywords(messages: List[str], num_keywords: int = 5) -> List[List[str]]:
     
     """
     Extracts top keywords from the list of messages using the given methods.
 
     Parameters
     ----------
-    messages : list of str
+    messages : List[str]
         A list of text messages to extract keywords.
 
-    method : str, default="tfidf"
+    method : str, default = "tfidf"
         The method to use for keyword extraction.
         - "tfidf": Term Frequency-Inverse Document Frequency.
 
-    num_keywords : int, default=5
+    num_keywords : int, default = 5
         The number of keywords to extract from each message.
+    
+    Raises
+    ------
+    TypeError
+        If `messages` is not a list of strings.
 
     Returns
     -------
-    list of list of str
+    List[List[str]]
         A list containing sublists of extracted keywords for each message. 
 
     Examples
@@ -27,7 +33,6 @@ def extract_keywords(messages: list[str], num_keywords: int = 5) -> list[list[st
     >>> messages = ["Learning Data science at MDS is amazing!", "I prefer to work with Python than R"]
     >>> extract_keywords(messages, method="tfidf", num_keywords=3)
     [['data', 'science', 'amazing'], ['python', 'prefer', 'work']]
-
     """
 
     if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
@@ -53,10 +58,3 @@ def extract_keywords(messages: list[str], num_keywords: int = 5) -> list[list[st
         top_keywords.append(n_keywords)
     
     return top_keywords
-
-        
-
-
-
-
-
