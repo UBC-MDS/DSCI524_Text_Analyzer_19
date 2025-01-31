@@ -1,6 +1,6 @@
 # messageanalyzer
 
-[![Documentation Status](https://readthedocs.org/projects/dsci524-text-analyzer-19/badge/?version=latest)](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/dsci524-text-analyzer-19/badge/?version=latest)](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest) [![ci-cd](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/actions/workflows/ci-cd.yml) [![codecov](https://codecov.io/gh/UBC-MDS/DSCI524_Text_Analyzer_19/graph/badge.svg?token=V1vuzkqQXg)](https://codecov.io/gh/UBC-MDS/DSCI524_Text_Analyzer_19)
 
 `messageanalyzer` is a Python package designed for performing comprehensive Natural Language Processing (NLP) tasks on text messages. This package provides tools for sentiment analysis, keyword extraction, topic modeling, and language patterns detection, making it ideal for text mining and content analysis projects. Full documentation and tutorial is hosted on [ReadtheDocs](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest).
 
