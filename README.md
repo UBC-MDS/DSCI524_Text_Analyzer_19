@@ -12,15 +12,75 @@ $ pip install messageanalyzer
 
 ## Usage
 
--   **`analyze_sentiment(messages: List[str], model: str = "Default")  -> List[dict]`**:\
-    This function analyzes the sentiment of a list of given messages and returns the sentiment scores and labels for each messange and prints alert message if it's highly negative.
+### **Activate Python**
+Ensure you have Python installed on your system. To get started, activate it by running:
+
+```bash
+python
+```
+
+Here’s a sample text list that will be used in the examples below:
+
+```python
+sample_text = [
+    "Artificial intelligence and machine learning are transforming industries around the globe.",
+    "The basketball team secured a thrilling victory in the final seconds of the game.",
+    "Yoga and meditation are excellent for reducing stress and improving mental health.",
+    "Exploring the hidden beaches of Bali is an unforgettable experience for any traveler.",
+    "Quantum computing is expected to revolutionize data processing and cryptography."
+]
+```
+
+You can now test the package with the examples below.
+
+-   **`analyze_sentiment(messages: List[str], model: str = "Default") -> List[dict]`**:\
+    This function analyzes the sentiment of a list of given messages and returns the sentiment scores and labels for each message.
+
+    #### Example:
+    ```python
+    from messageanalyzer.sentiment_analysis import analyze_sentiment
+
+    result = analyze_sentiment(sample_text)
+
+    print(result)
+    ```
+
 -   **`topic_modeling(messages: List[str], n_topics: int = 5, n_words: int = 10, random_state: int = 123) -> dict`**:\
-    This function extracts topics from a list of messages and returns the words that represent the extracted topics by using Nonnegative Matrix Factorization.
+    This function extracts topics from a list of messages and returns the words that represent the extracted topics using Nonnegative Matrix Factorization.
+
+    #### Example:
+    ```python
+    from messageanalyzer.topic_modeling import topic_modeling
+
+    topics = topic_modeling(sample_text, n_topics=2, n_words=3)
+
+    print(topics)
+    ```
+
 -   **`extract_keywords(messages: List[str], num_keywords: int = 5) -> list`**:\
     This function extracts the top keywords from a list of messages.
+
+    #### Example:
+    ```python
+    from messageanalyzer.extract_keywords import extract_keywords
+
+    keywords = extract_keywords(sample_text, num_keywords=3)
+
+    print(keywords)
+    ```
+
 -   **`detect_language_patterns(messages: List[str], method: str = "language", n: int = 2, top_n: int = 5) -> list`**:\
     This function detects language patterns such as detected languages, common n-grams, or character usage patterns from a list of messages.
 
+    #### Example:
+    ```python
+    from messageanalyzer.detect_language_patterns import detect_language_patterns
+
+    patterns = detect_language_patterns(sample_text, method="language")
+
+    print(patterns)
+    ```
+    
 ## Ecosystem Fit
 
 `messageanalyzer` integrates into the Python NLP ecosystem by offering a simple yet powerful toolkit for analyzing text data. While other Python libraries like [NLTK](https://www.nltk.org/) and [spaCy](https://spacy.io/) provide extensive NLP functionalities, `messageanalyzer` focuses on making sentiment analysis, keyword extraction, and language pattern visualization more accessible and user-friendly.
