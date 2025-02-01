@@ -5,10 +5,10 @@
 
 ### Bug Fixes
 
-- Feedback addressed by Lam Tsz Hin to add examples for usage
+- Feedback addressed by Colombe Tolokin to add examples for usage
   ([`9f4dd6d`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/9f4dd6d5061f7244bed123a977e82bd4af86e3cf))
 
-- Feedback addressed by Lam Tsz Hin to add link to contributing
+- Feedback addressed by Colombe Tolokin to add link to contributing
   ([`ac21a62`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/ac21a620f293d9772f3896727fb221af3a1c72d5))
 
 
@@ -16,25 +16,25 @@
 
 ### Bug Fixes
 
-- Feedback addressed by Lam Tsz Hin to fix typo in Ecosystem Fit
+- Feedback addressed by Adrian Leung to fix typo in Ecosystem Fit
   ([`d67f458`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/d67f458d2ae18fc427224c4dd4087b09edd8f0fc))
 
-- Feedback addressed by Lam Tsz Hin to refine introduction
+- Feedback addressed by Adrian Leung to refine introduction
   ([`42ad30a`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/42ad30a98da7bf45fac6f8c1e74895875de551f9))
 
-- Feedback addressed by Lixuan Lin to add ci-cd and codecov badges
+- Feedback addressed by Adrian Leung to add ci-cd and codecov badges
   ([`6d7e1dc`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/6d7e1dce7f1464dd53b3512d3451a28b68edcdf8))
 
-- Feedback addressed by Michael Suriawan - extract_keywords function
+- Feedback addressed by Anna Nandar to remove method parameter in extract_keywords function
   ([`c40a44f`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/c40a44ffa2300bc96ae7a8c993437bc4bc10833b))
 
-- Feedback addressed by Michael Suriawan to add explicit url to readthedocs
+- Feedback addressed by Adrian Leung to add explicit url to readthedocs
   ([`578e994`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/578e994cd0ede3be8d143306e1d43d4b723f2377))
 
-- Feedback addressed by Michael Suriawan to add explicit url to readthedocs
+- Feedback addressed by Adrian Leung to add explicit url to readthedocs
   ([`1221396`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/122139623d50ffae8a17e8bc3e7bf74e61635e57))
 
-- Feedback addressed by Michael Suriawan to add typings
+- Feedback addressed by Adrian Leung to add typings
   ([`96a1cd2`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/96a1cd27cbac287468202828766836ae9d258353))
 
 - Feedback addressed by Quanhua Huang about sentiment analysis source file docstring
