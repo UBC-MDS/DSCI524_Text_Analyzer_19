@@ -1,13 +1,44 @@
-# Changelog
+# CHANGELOG
 
-<!--next-version-placeholder-->
-## v1.0.0 (29/01/2025)
 
-- Name changed to `messageanalyzer`!
-## v0.2.0 (24/01/2025)
+## v2.0.0 (2025-02-01)
 
-- Name changed to `txtanalyzer`!
+### Bug Fixes
 
-## v0.1.0 (09/01/2025)
+- Feedback addressed by Lam Tsz Hin to fix typo in Ecosystem Fit
+  ([`d67f458`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/d67f458d2ae18fc427224c4dd4087b09edd8f0fc))
 
-- First release of `textanalyzer`!
+- Feedback addressed by Lam Tsz Hin to refine introduction
+  ([`42ad30a`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/42ad30a98da7bf45fac6f8c1e74895875de551f9))
+
+- Feedback addressed by Lixuan Lin to add ci-cd and codecov badges
+  ([`6d7e1dc`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/6d7e1dce7f1464dd53b3512d3451a28b68edcdf8))
+
+- Feedback addressed by Michael Suriawan - extract_keywords function
+  ([`c40a44f`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/c40a44ffa2300bc96ae7a8c993437bc4bc10833b))
+
+- Feedback addressed by Michael Suriawan to add explicit url to readthedocs
+  ([`578e994`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/578e994cd0ede3be8d143306e1d43d4b723f2377))
+
+- Feedback addressed by Michael Suriawan to add explicit url to readthedocs
+  ([`1221396`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/122139623d50ffae8a17e8bc3e7bf74e61635e57))
+
+- Feedback addressed by Michael Suriawan to add typings
+  ([`96a1cd2`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/96a1cd27cbac287468202828766836ae9d258353))
+
+- Feedback addressed by Quanhua Huang about sentiment analysis source file docstring
+  ([`50a3019`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/50a3019a9399e7965169237782a01b0532dd69b9))
+
+- Feedback addressed by Quanhua Huang about sentiment analysis test file docstring
+  ([`c2813aa`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/c2813aaff7c570b1bf1db6b18ddda162ccb7fb6d))
+
+- Minor documentation error in sentiment analysis
+  ([`a660cc6`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/a660cc633b2c7234f00c1107b66c0f79555cd1bf))
+
+### Features
+
+- Modified toml
+  ([`c8d72f5`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/c8d72f52c3534db96cd1be3c2bde47dbecdb6ce8))
+
+
+## v1.0.0 (2025-01-18)
