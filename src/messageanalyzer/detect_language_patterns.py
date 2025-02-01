@@ -38,6 +38,22 @@ def detect_language_patterns(messages: List[str], method: str = "language", n: i
         If messages is not a list of strings.
     ValueError
         If method is unsupported.
+  
+    Examples
+    --------
+    >>> messages = ["Hello, how are you?", "Bonjour, comment ça va?", "Hola, ¿cómo estás?"]
+
+    Example 1: Detecting languages
+    >>> detect_language_patterns(messages, method="language")
+    ['en', 'fr', 'es']  # English, French, Spanish
+
+    Example 2: Extracting common 2-grams
+    >>> detect_language_patterns(messages, method="ngrams", n=2, top_n=5)
+    [('how are', 1), ('are you', 1), ('comment ça', 1), ('ça va', 1), ('cómo estás', 1)]
+
+    Example 3: Analyzing common character patterns
+    >>> detect_language_patterns(messages, method="char_patterns", top_n=5)
+    [(' ', 8), ('o', 7), ('e', 6), ('a', 5), ('m', 3)]
     """
     if not isinstance(messages, list) or not all(isinstance(msg, str) for msg in messages):
         raise TypeError("messages must be a list of strings")
