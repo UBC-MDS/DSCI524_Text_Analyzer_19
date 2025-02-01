@@ -6,14 +6,6 @@ authors = ["Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin"]
 license = "MIT"
 readme = "README.md"
 
-[tool.semantic_release]
-version_toml = [
-    "pyproject.toml:tool.poetry.version",
-]                                                    # version location
-branch = "main"                                      # branch to make releases of
-changelog_file = "CHANGELOG.md"                      # changelog file
-build_command = "pip install poetry && poetry build" # build dists
-
 [tool.poetry.dependencies]
 python = "^3.9"
 scikit-learn = "^1.6.1"
@@ -22,7 +14,6 @@ langdetect = "^1.0.9"
 textblob = "^0.18.0.post0"
 matplotlib = "^3.9"
 
-
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 pytest-cov = "^6.0.0"
@@ -30,6 +21,14 @@ jupyter = "^1.1.1"
 myst-nb = {version = "^1.1.2", python = "^3.9"}
 sphinx-autoapi = "^3.4.0"
 sphinx-rtd-theme = "^3.0.2"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version",
+]                                                    # version location
+branch = "main"                                      # branch to make releases of
+changelog_file = "CHANGELOG.md"                      # changelog file
+build_command = "pip install poetry && poetry build" # build dists
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

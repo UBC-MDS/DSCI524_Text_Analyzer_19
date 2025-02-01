@@ -1,32 +1,36 @@
+from typing import List, Union, Tuple
 from langdetect import detect
 from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
 
-def detect_language_patterns(messages, method="language", n=2, top_n=5):
+def detect_language_patterns(messages: List[str], method: str = "language", n: int = 2, top_n: int = 5) -> Union[List[str], List[Tuple[str, int]]]:
     """
     Detects language patterns in a list of messages.
 
     Parameters
     ----------
-    messages : list of str
+    messages : List[str]
         A list of text messages to analyze.
 
-    method : str, default="language"
+    method : str, default = "language"
         The method to use for pattern detection. Supported methods are:
         - "language": Detects the language of each message.
         - "ngrams": Extracts common n-grams.
         - "char_patterns": Analyzes common character patterns.
 
-    n : int, default=2
+    n : int, default = 2
         The 'n' in n-grams, used when method="ngrams".
 
-    top_n : int, default=5
+    top_n : int, default = 5
         The number of top patterns to return.
 
     Returns
     -------
-    list
-        A list of detected patterns based on the chosen method.
+    Union[List[str], List[Tuple[str, int]]]
+        A list of detected patterns based on the chosen method:
+        - For "language", a list of detected languages (e.g., ['en', 'fr']).
+        - For "ngrams", a list of tuples (ngram, frequency).
+        - For "char_patterns", a list of tuples (character, frequency).
 
     Raises
     ------
