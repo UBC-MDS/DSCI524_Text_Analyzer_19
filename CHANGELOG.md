@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v2.0.1 (2025-02-01)
+
+### Bug Fixes
+
+- Feedback addressed by Lam Tsz Hin to add examples for usage
+  ([`9f4dd6d`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/9f4dd6d5061f7244bed123a977e82bd4af86e3cf))
+
+- Feedback addressed by Lam Tsz Hin to add link to contributing
+  ([`ac21a62`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/ac21a620f293d9772f3896727fb221af3a1c72d5))
+
+
 ## v2.0.0 (2025-02-01)
 
 ### Bug Fixes

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "messageanalyzer"
-version = "2.0.0"
+version = "2.0.1"
 description = "This package includes powerful tools to perform natural language processing on English texts."
 authors = ["Quanhua Huang, Adrian Leung, Anna Nandar, Colombe Tolokin"]
 license = "MIT"
