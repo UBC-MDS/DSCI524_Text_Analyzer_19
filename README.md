@@ -4,6 +4,8 @@
 
 `messageanalyzer` is a Python package designed for performing comprehensive Natural Language Processing (NLP) tasks on text messages. This package provides tools for sentiment analysis, keyword extraction, topic modeling, and language patterns detection, making it ideal for text mining and content analysis projects. Full documentation and tutorial is hosted on [ReadtheDocs](https://dsci524-text-analyzer-19.readthedocs.io/en/latest/?badge=latest).
 
+`messageanalyzer`is built for developers, data scientists, and researchers working in text mining, social media analysis, and customer feedback evaluation. Its easy-to-use design makes it a great fit for both NLP beginners who want straightforward solutions and experienced professionals seeking a quick, efficient way to draw insights from text data. Whether you’re analyzing customer reviews, survey responses, or social media content, this package offers a reliable tool to support business decisions, sentiment monitoring, and academic research in a practical and user-friendly way.
+
 ## Installation
 
 ``` bash
