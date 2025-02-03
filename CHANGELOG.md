@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v2.0.3 (2025-02-03)
+
+### Bug Fixes
+
+- Feedback addressed by Colombe about target audience
+  ([`43e3192`](https://github.com/UBC-MDS/DSCI524_Text_Analyzer_19/commit/43e31925fbcf83b2a6f19538a4a32f264c33701c))
+
+
 ## v2.0.2 (2025-02-03)
 
 ### Bug Fixes
