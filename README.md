@@ -80,6 +80,13 @@ You can now test the package with the examples below.
 
     print(patterns)
     ```
+
+## Running Test
+
+Here is the code we’ve written for testing using pytest. Under the project root, run this following code :
+```bash
+poetry run pytest tests
+```
     
 ## Ecosystem Fit
 
